@@ -1,10 +1,15 @@
 import React from "react";
+import { BrowserRouter } from "react-router-dom";
 import "./App.css";
+import AuthProvider from "./providers/AuthProvider";
+import PrivateRouter from "./components/PrivateRouter";
 
 export default function App() {
   return (
-    <div>
-      <h1>App</h1>
-    </div>
+    <BrowserRouter>
+      <AuthProvider>
+        <PrivateRouter />
+      </AuthProvider>
+    </BrowserRouter>
   );
 }
