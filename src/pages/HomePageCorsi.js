@@ -1,12 +1,15 @@
 import React from "react";
-import UserInfo from "../components/UserInfo";
+import NavBar from "../components/Navbar";
+
+import Corsi from "../components/Corsi";
 
 const HomePageCorsi = (props) => {
   return (
-    <div>
-      <h1>home page corsi</h1>
-      <UserInfo />
-    </div>
+    <>
+      <NavBar />
+
+      <Corsi />
+    </>
   );
 };
 

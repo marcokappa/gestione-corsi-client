@@ -1,0 +1,8 @@
+.card {
+  width: 18rem;
+}
+
+.card:hover {
+  box-shadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.253);
+  border-color: rgb(156, 151, 161);
+}

@@ -3,6 +3,13 @@ import { BrowserRouter } from "react-router-dom";
 import "./App.css";
 import AuthProvider from "./providers/AuthProvider";
 import PrivateRouter from "./components/PrivateRouter";
+/* import "primereact/resources/themes/bootstrap4-light-blue/theme.css";
+import "primereact/resources/primereact.min.css";
+import "primeicons/primeicons.css";
+import "primeflex/primeflex.css";
+import "./layout/layout.scss"; */
+import "./App.scss";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function App() {
   return (
