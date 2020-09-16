@@ -12,10 +12,13 @@ import corso_AL1_64 from "../img/corso_AL1_64.png";
 import corso_AL2_64 from "../img/corso_AL2_64.png";
 import corso_A1_64 from "../img/corso_A1_64.png";
 import "../styles/card-style.css";
+import { Link } from "react-router-dom";
 
 const CorsoCard = ({ corso }) => {
   let img = null;
+  let link = null;
   if (corso) {
+    link = "/corso/" + corso.id;
     switch (corso.sigla) {
       case "SA1":
         img = corso_SA1_64;
@@ -71,7 +74,9 @@ const CorsoCard = ({ corso }) => {
             <FormLabel>Vice Direttore: {corso.viceDirettore}</FormLabel>
             <FormLabel>Segretario: {corso.segretario}</FormLabel>
           </Card.Text>
-          <Button variant="success">Vai al corso</Button>
+          <Link to={link}>
+            <Button variant="success">Vai al corso</Button>
+          </Link>
         </Card.Body>
       </Card>
     </>

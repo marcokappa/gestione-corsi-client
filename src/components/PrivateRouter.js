@@ -1,6 +1,7 @@
 import React from "react";
 import { Switch, Redirect } from "react-router-dom";
 import HomePageCorsi from "../pages/HomePageCorsi";
+import Corso from "./Corso";
 import PrivateRoute from "./PrivateRoute";
 
 /**
@@ -10,6 +11,7 @@ const PriveteRouter = () => (
   <Switch>
     <Redirect from="/" exact to="/home" />
     <PrivateRoute path="/home" component={HomePageCorsi} />
+    <PrivateRoute path="/corso/:id" component={Corso} />
   </Switch>
 );
 

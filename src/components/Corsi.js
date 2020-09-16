@@ -14,6 +14,7 @@ const Corsi = (props) => {
     setAnni([2020, 2019, 2018]);
     setCorsi([
       {
+        id: 1,
         sigla: "SA1",
         titolo: "32° corso di scialpinismo",
         direttore: "Cita Arainna",
@@ -21,6 +22,7 @@ const Corsi = (props) => {
         segretario: "Knezevich Marco",
       },
       {
+        id: 2,
         sigla: "AR1",
         titolo: "43° corso di roccia",
         direttore: "Picotti Carlo",
@@ -28,6 +30,7 @@ const Corsi = (props) => {
         segretario: "Elena Dalcul",
       },
       {
+        id: 3,
         sigla: "A1",
         titolo: "24° corso base di alpinismo",
         direttore: "Michelini Roberto",
