@@ -46,7 +46,15 @@ const Iscrizioni = ({ iscrizioni }) => {
     },
   ];
 
-  return <BootstrapTable keyField="id" data={iscrizioni} columns={columns} />;
+  return (
+    <BootstrapTable
+      keyField="id"
+      data={iscrizioni}
+      columns={columns}
+      striped
+      hover
+    />
+  );
 };
 
 export default Iscrizioni;
