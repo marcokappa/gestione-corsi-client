@@ -13,14 +13,12 @@ import scuola_alpinismo48 from "../img/scuola_alpinismo48.png";
 const NavBar = (props) => {
   return (
     <Navbar bg="primary" variant="dark" expand="lg">
-      <Navbar.Brand href="#home">
+      <Navbar.Brand href="/corsi">
         <img src={scuola_alpinismo48} alt="logo sito" />
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link href="#home">Home</Nav.Link>
-
           <Nav.Link href="/corsi">Corsi</Nav.Link>
           <Nav.Link href="/calendario">Calendario</Nav.Link>
           <Nav.Link href="/bilancio">Bilancio</Nav.Link>

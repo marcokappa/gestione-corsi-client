@@ -1,7 +1,7 @@
 import React from "react";
 import { Switch, Redirect } from "react-router-dom";
-import HomePageCorsi from "../pages/HomePageCorsi";
-import Corso from "./Corso";
+import HomePage from "../pages/HomePage";
+import CorsoPage from "../pages/CorsoPage";
 import PrivateRoute from "./PrivateRoute";
 
 /**
@@ -10,8 +10,9 @@ import PrivateRoute from "./PrivateRoute";
 const PriveteRouter = () => (
   <Switch>
     <Redirect from="/" exact to="/home" />
-    <PrivateRoute path="/home" component={HomePageCorsi} />
-    <PrivateRoute path="/corso/:id" component={Corso} />
+    <Redirect from="/corsi" exact to="/home" />
+    <PrivateRoute path="/home" component={HomePage} />
+    <PrivateRoute path="/corso/:id" component={CorsoPage} />
   </Switch>
 );
 

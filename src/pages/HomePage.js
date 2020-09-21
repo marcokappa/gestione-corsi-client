@@ -3,7 +3,7 @@ import NavBar from "../components/Navbar";
 
 import Corsi from "../components/Corsi";
 
-const HomePageCorsi = (props) => {
+const HomePage = (props) => {
   return (
     <>
       <NavBar />
@@ -13,4 +13,4 @@ const HomePageCorsi = (props) => {
   );
 };
 
-export default HomePageCorsi;
+export default HomePage;
