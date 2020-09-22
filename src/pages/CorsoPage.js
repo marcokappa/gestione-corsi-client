@@ -35,6 +35,7 @@ const Corso = (props) => {
       isCertificatoMedico: false,
       isBollinoCai: false,
       isNoleggio: true,
+      isIscrizioneOk: false,
     },
     {
       id: 2,
@@ -47,6 +48,33 @@ const Corso = (props) => {
       isCertificatoMedico: false,
       isBollinoCai: true,
       isNoleggio: false,
+      isIscrizioneOk: false,
+    },
+    {
+      id: 3,
+      nome: "tony",
+      cognome: "campari",
+      sesso: "M",
+      eta: 58,
+      isCaparra: true,
+      isSaldo: true,
+      isCertificatoMedico: true,
+      isBollinoCai: true,
+      isNoleggio: false,
+      isIscrizioneOk: false,
+    },
+    {
+      id: 4,
+      nome: "guido",
+      cognome: "la vespa",
+      sesso: "M",
+      eta: 18,
+      isCaparra: true,
+      isSaldo: true,
+      isCertificatoMedico: true,
+      isBollinoCai: true,
+      isNoleggio: true,
+      isIscrizioneOk: true,
     },
   ];
   return (
@@ -57,16 +85,21 @@ const Corso = (props) => {
         <Col>
           <Nav variant="tabs" className="flex-row">
             <Nav.Item>
-              <Nav.Link eventKey="info">Info</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
               <Nav.Link eventKey="iscrizioni">Iscrizioni</Nav.Link>
             </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link eventKey="anagrafica">Anagrafica</Nav.Link>
+            </Nav.Item>
+
             <Nav.Item>
               <Nav.Link eventKey="bilancio">Bilancio</Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link eventKey="cassa">Cassa</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link eventKey="info">Info</Nav.Link>
             </Nav.Item>
           </Nav>
 

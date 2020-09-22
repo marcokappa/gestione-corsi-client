@@ -5,47 +5,6 @@ import filterFactory, {
   textFilter,
   selectFilter,
 } from "react-bootstrap-table2-filter";
-import { Alert } from "react-bootstrap";
-
-function formatIscrizione(cell, row) {
-  if (row.isIscrizioneOk) {
-    return <FcCheckmark size={32} />;
-  } else {
-    return <FcCancel size={32} />;
-  }
-}
-
-function formatWithIcon(isCondition) {
-  if (isCondition) {
-    return <FcCheckmark size={32} />;
-  } else {
-    //return <FcCancel size={32} />;
-    return null;
-  }
-}
-
-function formatCaparra(cell, row) {
-  return formatWithIcon(row.isCaparra);
-}
-
-function formatSaldo(cell, row) {
-  return formatWithIcon(row.isSaldo);
-}
-
-function formatCertificatoMedico(cell, row) {
-  return formatWithIcon(row.isCertificatoMedico);
-}
-
-function formatBollinoCai(cell, row) {
-  return formatWithIcon(row.isBollinoCai);
-}
-
-function formatNoleggio(cell, row) {
-  if (row.isNoleggio) {
-    return <FcBookmark size={32} />;
-  }
-  return null;
-}
 
 const headerSortingStyle = { backgroundColor: "#c8e6c9" };
 
@@ -70,58 +29,13 @@ const rowEvents = {
   },
 };
 
-function rendererExpandRow(row) {
-  let variant = null;
-  let messages = [];
-  if (row.isIscrizioneOk) {
-    variant = "success";
-    messages.push("Iscrizione ok");
-  } else {
-    variant = "danger";
-    if (!row.isCaparra) {
-      messages.push("Caparra mancante");
-    }
-    if (!row.isSaldo) {
-      messages.push("Saldo mancante");
-    }
-    if (!row.isCertificatoMedico) {
-      messages.push("Certificato medico mancante");
-    }
-    if (!row.isBollinoCai) {
-      messages.push("Bollino Cai mancante");
-    }
-  }
-
-  return (
-    <Alert key={row.id} variant={variant}>
-      <ul>
-        {messages.map((message) => (
-          <li>{message}</li>
-        ))}
-      </ul>
-    </Alert>
-  );
-}
-
-const expandRow = {
-  renderer: rendererExpandRow,
-  showExpandColumn: true,
-};
-
-const Iscrizioni = ({ iscrizioni }) => {
+const Anagrafiche = ({ anagrafiche }) => {
   const columns = [
     {
       dataField: "id",
       text: "ID",
       hidden: true,
       headerSortingStyle,
-    },
-    {
-      dataField: "stato",
-      text: "stato",
-      formatter: formatIscrizione,
-      align: "center",
-      headerAlign: "center",
     },
 
     {
@@ -203,9 +117,8 @@ const Iscrizioni = ({ iscrizioni }) => {
       defaultSorted={defaultSorted}
       filter={filterFactory()}
       rowEvents={rowEvents}
-      expandRow={expandRow}
     />
   );
 };
 
-export default Iscrizioni;
+export default Anagrafiche;
